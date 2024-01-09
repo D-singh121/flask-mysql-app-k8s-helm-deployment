@@ -4,10 +4,10 @@ metadata:
   name: two-tier-app-service
 spec:
   selector:
-    app: two-tier-app
+    app: two-tier-app  # this is deployment name 
   ports:
     - protocol: TCP
-      port: 80
-      targetPort: 5000
-      nodePort: 30004
+      port: 80        # our laptop internal port number.
+      targetPort: 5000  # application running on port number.
+      nodePort: 30004   # nodeport port number in range out of 30000-32767
   type: NodePort
